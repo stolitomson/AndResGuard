@@ -49,10 +49,10 @@ publishing {
                 classifier "windows-x86_64"
                 extension "exe"
             }
-            artifact("executable/SevenZip-windows-aarch_64.exe") {
-                classifier "windows-aarch_64"
-                extension "exe"
-            }
+//            artifact("executable/SevenZip-windows-aarch_64.exe") {
+//                classifier "windows-aarch_64"
+//                extension "exe"
+//            }
             artifact("executable/SevenZip-osx-x86_64.exe") {
                 classifier "osx-x86_64"
                 extension "exe"

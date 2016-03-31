@@ -11,7 +11,7 @@
 1. only support gradle 7.0+
 2. sevenzip support  osx aarch
 
-#### 1.2.22.6.SNAPSHOT (from 1.2.22.6 )
+#### 1.2.23-SNAPSHOT (from 1.2.22.6 )
 
 1. update sevenzip version to **21.07**
 2. add new arch linux-arm_32/ linux-aarch_64/windows-aarch_64
@@ -24,9 +24,19 @@
 com.tencent.mm --> io.github.leon406
 
 ### change version:
-**stable:** 1.2.21 --> 1.2.22.6
+- **stable(mavenCentral):** 1.2.21 --> 1.2.22.6
 
-**snapshot:** 1.2.21 -->1.2.22.6.SNAPSHOT
+- **snapshot:** 1.2.21 -->1.2.23-SNAPSHOT
+
+  ​	add snapshots repo to your build.gradle
+
+```
+maven {
+    url "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+}
+```
+
+
 
 
 
