@@ -1,0 +1,28 @@
+/**
+ * 上传到local maven
+ */
+apply plugin: 'maven-publish'
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+publishing {
+    publications {
+        maven(MavenPublication) {
+//            artifactId = 'plugin'
+            repositories {
+                maven {
+                    name = 'alinexsus'
+                    url = properties.getProperty("NEXUS_REPOSITORY_URL")
+                    credentials {
+                        username properties.getProperty("NEXUS_USERNAME")
+                        password properties.getProperty("NEXUS_PASSWORD")
+                    }
+                }
+            }
+
+//            repository(url: NEXUS_REPOSITORY_URL) {
+//                authentication(userName: NEXUS_USERNAME, password: NEXUS_PASSWORD)
+//            }
+            from components.java
+        }
+    }
+}
