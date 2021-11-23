@@ -18,5 +18,3 @@ sourceSets {
   }
 }
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
-
-apply from: "../uploadlocal.gradle"

@@ -1,52 +1,54 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-  repositories {
-    google()
-    jcenter()
-    mavenCentral()
-  }
-  dependencies {
-    classpath 'com.android.tools.build:gradle:7.0.3'
-  }
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.3'
+        classpath 'com.vanniktech:gradle-maven-publish-plugin:0.18.0'
+    }
 }
 
 allprojects {
-  repositories {
-    google()
-    jcenter()
-    mavenCentral()
-  }
-  tasks.withType(JavaCompile) {
-    sourceCompatibility = rootProject.ext.javaVersion
-    targetCompatibility = rootProject.ext.javaVersion
-  }
+    plugins.withId("com.vanniktech.maven.publish") {
+        mavenPublish {
+            sonatypeHost = "S01"
+        }
+    }
+    if (it.name != "AndResGuard-cli") apply plugin: "com.vanniktech.maven.publish"
+    repositories {
+        google()
+        mavenCentral()
+    }
+    tasks.withType(JavaCompile) {
+        sourceCompatibility = rootProject.ext.javaVersion
+        targetCompatibility = rootProject.ext.javaVersion
+    }
 
-  tasks.withType(GroovyCompile) {
-    sourceCompatibility = rootProject.ext.javaVersion
-    targetCompatibility = rootProject.ext.javaVersion
-  }
+    tasks.withType(GroovyCompile) {
+        sourceCompatibility = rootProject.ext.javaVersion
+        targetCompatibility = rootProject.ext.javaVersion
+    }
 }
 
 ext {
-  javaVersion = JavaVersion.VERSION_1_8
+    javaVersion = JavaVersion.VERSION_1_8
 
-  GROUP = 'com.github.leon406'
-  VERSION_NAME = "${ANDRESGUARD_VESSION}"
+    GROUP = 'io.github.leon406'
+    VERSION_NAME = "${ANDRESGUARD_VESSION}"
 
-  POM_PACKAGING = "pom"
-  POM_DESCRIPTION = "Android Resource Proguard Core Lib"
+    POM_PACKAGING = "pom"
+    POM_DESCRIPTION = "Android Resource Proguard Core Lib"
 
-  POM_URL = "https://github.com/shwenzhang/AndResGuard"
-  POM_SCM_URL = "https://github.com/shwenzhang/AndResGuard.git"
-  POM_ISSUE_URL = 'https://github.com/shwenzhang/AndResGuard/issues'
+    POM_URL = "https://github.com/Leon406/AndResGuard"
+    POM_SCM_URL = "https://github.com/Leon406/AndResGuard.git"
+    POM_ISSUE_URL = 'https://github.com/Leon406/AndResGuard/issues'
 
-  POM_LICENCE_NAME = "Apache-2.0"
-  POM_LICENCE_URL = "http://www.apache.org/licenses/"
-  POM_LICENCE_DIST = "repo"
+    POM_LICENCE_NAME = "Apache-2.0"
+    POM_LICENCE_URL = "http://www.apache.org/licenses/"
+    POM_LICENCE_DIST = "repo"
 
-  POM_DEVELOPER_ID = "Tencent Wechat"
-  POM_DEVELOPER_NAME = "Tencent Wechat, Inc."
-
-  BINTRAY_LICENCE = ["Apache-2.0"]
-  BINTRAY_ORGANIZATION = "wemobiledev"
+    POM_DEVELOPER_ID = "Leon"
+    POM_DEVELOPER_NAME = "Leon"
 }

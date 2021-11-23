@@ -52,5 +52,3 @@ publishing {
         }
     }
 }
-
-apply from: "../uploadlocal.gradle"

@@ -14,5 +14,3 @@ dependencies {
 repositories {
   mavenCentral()
 }
-
-apply from: "../uploadlocal.gradle"
