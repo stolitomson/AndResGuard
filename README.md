@@ -20,6 +20,12 @@ com.tencent.mm --> io.github.leon406
 
 
 
+### 问题
 
+AGP 4.2.+ 引入资源压缩, 但效果不如AndResGuard,两个同时启用无法正常使用,需要在 grale.properties禁用
 
+```
+android.enableResourceOptimizations=false
+```
 
+测试AGP 4.2.2 AGP 7.0.4 可以正常使用
