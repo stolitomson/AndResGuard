@@ -4,11 +4,19 @@
 
 
 
-### Changes
+## Changes
+
+#### 1.2.22.6
 
 1. only support gradle 7.0+
-
 2. sevenzip support  osx aarch
+
+#### 1.2.22.6.SNAPSHOT (from 1.2.22.6 )
+
+1. update sevenzip version to **21.07**
+2. add new arch linux-arm_32/ linux-aarch_64/windows-aarch_64
+
+### How to Use(refer [origin repo](https://github.com/shwenzhang/AndResGuard),and modify as belows)
 
 
 ### change group id:
@@ -16,7 +24,9 @@
 com.tencent.mm --> io.github.leon406
 
 ### change version:
-1.2.21 --> 1.2.22.6 /1.2.22.6.SNAPSHOT
+**stable:** 1.2.21 --> 1.2.22.6
+
+**snapshot:** 1.2.21 -->1.2.22.6.SNAPSHOT
 
 
 
