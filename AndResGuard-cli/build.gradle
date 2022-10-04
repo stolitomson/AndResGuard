@@ -20,6 +20,7 @@ sourceSets {
 }
 
 jar {
+  duplicatesStrategy = DuplicatesStrategy.INCLUDE
   manifest {
     attributes 'Main-Class': 'com.tencent.mm.resourceproguard.cli.CliMain'
     attributes 'Manifest-Version': archiveVersion
@@ -27,7 +28,6 @@ jar {
     attributes "Build-Time": releaseTime()
   }
   from {
-    configurations.implementation.setCanBeResolved(true)
     configurations.implementation.collect { it.isDirectory() ? it : zipTree(it) }
   }
 }
