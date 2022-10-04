@@ -6,7 +6,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.0.3'
-        classpath 'com.vanniktech:gradle-maven-publish-plugin:0.18.0'
+//        classpath 'com.vanniktech:gradle-maven-publish-plugin:0.18.0'
     }
 }
 
@@ -21,7 +21,7 @@ allprojects {
 //            sonatypeHost = "S01"
 //        }
 //    }
-    if (it.name != "AndResGuard-cli") apply plugin: "com.vanniktech.maven.publish"
+//    if (it.name != "AndResGuard-cli") apply plugin: "com.vanniktech.maven.publish"
     repositories {
         google()
         mavenCentral()
