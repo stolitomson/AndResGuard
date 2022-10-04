@@ -21,7 +21,7 @@ allprojects {
 //            sonatypeHost = "S01"
 //        }
 //    }
-//    if (it.name != "AndResGuard-cli") apply plugin: "com.vanniktech.maven.publish"
+    if (it.name != "AndResGuard-cli") apply plugin: "com.vanniktech.maven.publish"
     repositories {
         google()
         mavenCentral()
