@@ -20,47 +20,47 @@ artifacts {
     archives sourcesJar
 }
 
-//publishing {
-//    publications {
-//        ResguardPub(MavenPublication) {
-//            artifactId POM_ARTIFACT_ID
-//            groupId group
-//            artifact("executable/SevenZip-linux-x86_32.exe") {
-//                classifier "linux-x86_32"
+publishing {
+    publications {
+        ResguardPub(MavenPublication) {
+            artifactId POM_ARTIFACT_ID
+            groupId group
+            artifact("executable/SevenZip-linux-x86_32.exe") {
+                classifier "linux-x86_32"
+                extension "exe"
+            }
+            artifact("executable/SevenZip-linux-x86_64.exe") {
+                classifier "linux-x86_64"
+                extension "exe"
+            }
+            artifact("executable/SevenZip-linux-arm_32.exe") {
+                classifier "linux-arm_32"
+                extension "exe"
+            }
+            artifact("executable/SevenZip-linux-aarch_64.exe") {
+                classifier "linux-aarch_64"
+                extension "exe"
+            }
+            artifact("executable/SevenZip-windows-x86_32.exe") {
+                classifier "windows-x86_32"
+                extension "exe"
+            }
+            artifact("executable/SevenZip-windows-x86_64.exe") {
+                classifier "windows-x86_64"
+                extension "exe"
+            }
+//            artifact("executable/SevenZip-windows-aarch_64.exe") {
+//                classifier "windows-aarch_64"
 //                extension "exe"
 //            }
-//            artifact("executable/SevenZip-linux-x86_64.exe") {
-//                classifier "linux-x86_64"
-//                extension "exe"
-//            }
-//            artifact("executable/SevenZip-linux-arm_32.exe") {
-//                classifier "linux-arm_32"
-//                extension "exe"
-//            }
-//            artifact("executable/SevenZip-linux-aarch_64.exe") {
-//                classifier "linux-aarch_64"
-//                extension "exe"
-//            }
-//            artifact("executable/SevenZip-windows-x86_32.exe") {
-//                classifier "windows-x86_32"
-//                extension "exe"
-//            }
-//            artifact("executable/SevenZip-windows-x86_64.exe") {
-//                classifier "windows-x86_64"
-//                extension "exe"
-//            }
-////            artifact("executable/SevenZip-windows-aarch_64.exe") {
-////                classifier "windows-aarch_64"
-////                extension "exe"
-////            }
-//            artifact("executable/SevenZip-osx-x86_64.exe") {
-//                classifier "osx-x86_64"
-//                extension "exe"
-//            }
-//            artifact("executable/SevenZip-osx-aarch_64.exe") {
-//                classifier "osx-aarch_64"
-//                extension "exe"
-//            }
-//        }
-//    }
-//}
+            artifact("executable/SevenZip-osx-x86_64.exe") {
+                classifier "osx-x86_64"
+                extension "exe"
+            }
+            artifact("executable/SevenZip-osx-aarch_64.exe") {
+                classifier "osx-aarch_64"
+                extension "exe"
+            }
+        }
+    }
+}
