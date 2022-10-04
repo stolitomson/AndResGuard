@@ -27,6 +27,7 @@ jar {
     attributes "Build-Time": releaseTime()
   }
   from {
+    configurations.implementation.setCanBeResolved(true)
     configurations.implementation.collect { it.isDirectory() ? it : zipTree(it) }
   }
 }
