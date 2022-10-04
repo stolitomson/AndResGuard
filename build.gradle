@@ -16,12 +16,12 @@ allprojects {
             canBeResolved = true
         }
     }
-    plugins.withId("com.vanniktech.maven.publish") {
-        mavenPublish {
-            sonatypeHost = "S01"
-        }
-    }
-    if (it.name != "AndResGuard-cli") apply plugin: "com.vanniktech.maven.publish"
+//    plugins.withId("com.vanniktech.maven.publish") {
+//        mavenPublish {
+//            sonatypeHost = "S01"
+//        }
+//    }
+//    if (it.name != "AndResGuard-cli") apply plugin: "com.vanniktech.maven.publish"
     repositories {
         google()
         mavenCentral()
